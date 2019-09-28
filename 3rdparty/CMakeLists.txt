@@ -1,4 +1,7 @@
 
 # External libraries
 set(IDE_FOLDER "3rdparty")
-add_subdirectory(KHR)
+
+if(NOT OPTION_EXTERNAL_KHR)
+    add_subdirectory(KHR)
+endif(NOT OPTION_EXTERNAL_KHR)

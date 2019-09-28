@@ -1,0 +1,9 @@
+if(OPTION_EXTERNAL_KHR)
+    find_package(KHR REQUIRED)
+    set(DEFAULT_INCLUDE_DIRECTORIES ${DEFAULT_INCLUDE_DIRECTORIES} ${KHR_INCLUDE_DIRS})
+
+    set(KHR_LIBRARY "")
+else()
+    set(KHR_LIBRARY externals::KHRplatform)
+endif(OPTION_EXTERNAL_KHR)
+

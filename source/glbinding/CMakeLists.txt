@@ -252,7 +252,7 @@ target_link_libraries(${target}
 
     PUBLIC
     ${DEFAULT_LIBRARIES}
-    externals::KHRplatform
+    ${KHR_LIBRARY}
 
     INTERFACE
 )

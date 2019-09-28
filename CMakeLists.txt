@@ -79,6 +79,7 @@ option(OPTION_BUILD_TOOLS             "Build tools."                            
 option(OPTION_BUILD_EXAMPLES          "Build examples."                                        ON)
 option(OPTION_BUILD_WITH_BOOST_THREAD "Use boost::thread instead of std::thread."              OFF)
 option(OPTION_BUILD_CHECK             "Enable source code check targets"                       OFF)
+option(OPTION_EXTERNAL_KHR            "Uses external KHR instead of provided (and skips its install" OFF)
 
 
 # 
@@ -106,6 +107,7 @@ file(WRITE "${PROJECT_BINARY_DIR}/VERSION" "${META_NAME_VERSION}")
 # 
 
 include(cmake/CompileOptions.cmake)
+include(cmake/KHRHandling.cmake)
 
 
 #
